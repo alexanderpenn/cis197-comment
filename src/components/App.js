@@ -12,7 +12,7 @@ const App = () => {
   }
 
   return (
-    <div>
+    <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
       <h1>CIS 197 Comment Feed</h1>
       <PendingPost onSubmit={onSubmit} depth={0} />
       <Feed setPosts={setPosts} posts={posts} />
