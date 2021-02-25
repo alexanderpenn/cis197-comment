@@ -7,7 +7,7 @@ import Feed from './Feed'
 const App = () => {
   const [posts, setPosts] = useState([])
 
-  const onSubmit = (post) => {
+  const onSubmit = post => {
     setPosts([...posts, post])
   }
 

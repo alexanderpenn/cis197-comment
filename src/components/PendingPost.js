@@ -16,7 +16,7 @@ export default class PendingPost extends React.Component {
     this.handleSubmission = this.handleSubmission.bind(this)
   }
 
-  handleInputChange(event) {
+  handleInputChange = event => {
     const { name } = event.target
 
     this.setState({
@@ -24,7 +24,7 @@ export default class PendingPost extends React.Component {
     })
   }
 
-  handleSubmission(event) {
+  handleSubmission = event => {
     event.preventDefault()
     const post = {
       name: this.state.name,
@@ -35,7 +35,7 @@ export default class PendingPost extends React.Component {
     this.props.onSubmit(post)
   }
 
-  render() {
+  render = () => {
     return (
       <form onSubmit={this.handleSubmission}>
         <input

@@ -26,7 +26,7 @@ export default class ImplementedPost extends React.Component {
     }))
   }
 
-  addReply = (reply) => {
+  addReply = reply => {
     this.setState(({ replies }) => {
       return {
         replies: [
@@ -69,7 +69,7 @@ export default class ImplementedPost extends React.Component {
             <PendingPost onSubmit={this.addReply} depth={this.props.depth + 1} />
           )}
           {replies.map((reply, index) => (
-            <ImplementedPost pKey={index} {...reply} />
+            <ImplementedPost key={index} {...reply} />
           ))}
         </div>
       </div>
